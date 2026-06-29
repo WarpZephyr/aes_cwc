@@ -1,12 +1,37 @@
-CMakeLists.txt.user
+# ==========================================
+# CMake Build Artifacts & System Files
+# ==========================================
+/build/
+/generated/
+/out/
+/CMakeFiles/
+/CMakeScripts/
+/Testing/
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
+CMakeSystem.cmake
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-_deps
+Makefile
+
+# ==========================================
+# IDE & User Specific Configurations
+# ==========================================
+.vs/
 CMakeUserPresets.json
+CMakeLists.txt.user
+*.sln
+*.vcxproj
+*.filters
+*.user
+*.suo
+
+# ==========================================
+# Compiled Native Binary Outputs
+# ==========================================
+*.dll
+*.so
+*.dylib
+*.lib
+*.pdb
