@@ -11,5 +11,4 @@ This library does AES CWC decryption and encryption.
 - The endianness changes are discovered from [ds3os](https://github.com/TLeonardUK/ds3os) by [Tim Leonard](https://github.com/TLeonardUK).
 
 ## License
-The code files are subject to the original copyright and permissions granted by Brian Gladman.  
 See [LICENSE.txt](LICENSE.txt) for details.
