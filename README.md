@@ -1,4 +1,4 @@
-# aes_cwc
+# aescwc
 This library does AES CWC decryption and encryption.
 
 ## Changes
