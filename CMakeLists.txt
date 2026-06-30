@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
+
+# Required for export symbols
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
 project(aes_cwc C)
 
 add_library(${PROJECT_NAME} SHARED
