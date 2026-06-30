@@ -979,25 +979,17 @@ ret_type cwc_decrypt_message(               /* decrypt an entire message    */
     cwc_auth_header(hdr, hdr_len, ctx);
     cwc_decrypt(msg, msg_len, ctx);
     rr = cwc_compute_tag(local_tag, tag_len, ctx);
-    /*
-    printf("expected_tag=");
-    for (int i = 0; i < CBLK_LEN; i++)
-    {
-        printf("%02x", local_tag[i]);
-    }
-    printf("\n");
-    printf("input_tag   =");
-    for (int i = 0; i < tag_len; i++)
-    {
-        printf("%02x", tag[i]);
-    }
-    printf("\n");
-    printf("hdr_cnt=%i\n", ctx->hdr_cnt);
-    printf("txt_acnt=%i\n", ctx->txt_acnt);
-    printf("txt_ccnt=%i\n", ctx->txt_ccnt);
-    printf("\n");
-    */
     return (rr != RETURN_GOOD || memcmp(tag, local_tag, tag_len)) ? RETURN_ERROR : RETURN_GOOD;
+}
+
+ret_type cwc_get_ctx_size(void)
+{
+    return (ret_type)sizeof(cwc_ctx);
+}
+
+ret_type cwc_get_ctx_align(void)
+{
+    return (ret_type)alignof(cwc_ctx);
 }
 
 #if defined(__cplusplus)

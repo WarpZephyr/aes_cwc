@@ -194,6 +194,14 @@ ret_type cwc_crypt_data(                    /* encrypt or decrypt data      */
             unsigned long data_len,         /* and its length in bytes      */
             cwc_ctx ctx[1]);                /* the mode context             */
 
+/* Gets the cwc context size */
+
+ret_type cwc_get_ctx_size(void);
+
+/* Gets the cwc context alignment */
+
+ret_type cwc_get_ctx_align(void);
+
 #if defined(__cplusplus)
 }
 #endif

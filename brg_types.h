@@ -210,6 +210,18 @@ extern "C" {
 #define UNIT_CAST(x,size)           ((UI_TYPE(size) )(x))  
 #define UPTR_CAST(x,size)           ((UI_TYPE(size)*)(x))
 
+/* A portable alignment getter trick */
+
+#if defined(_MSC_VER)
+    #define alignof(type) \
+        __pragma(warning(push)) \
+        __pragma(warning(disable : 4116)) \
+        (offsetof(struct { char c; type d; }, d)) \
+        __pragma(warning(pop))
+#else
+    #define alignof(type) (offsetof(struct { char c; type d; }, d))
+#endif
+
 #if defined(__cplusplus)
 }
 #endif
